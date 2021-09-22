@@ -26,13 +26,18 @@ Use controllers for business logic.
 
 
 
-### Instructions
+## Instructions
 
+### Create Server
 - [x] Create an express server using express-generator: 
   - [x] express suggestion-box-hw --view=ejs
   - [x] Delete all view related items
+
+### Connect Database
 - [ ] Connect to mongodb with mongoose. 
   - [ ] Remember to name database suggestion-hw.
+  
+### Create Routes
 - [ ] Routes
   - [ ] In routes folder create a suggestions folder
     - [ ] Then create suggestionRouter.js inside suggestion folder
@@ -41,6 +46,7 @@ Use controllers for business logic.
     - [ ] Create model folder
     - [ ] Controller folder.
 
+### Create Data Models
 - [ ] In model folder, 
   - [ ] create a file called Suggestion.js: 
     - [ ] Build a schema for Suggestions called SuggestionSchema
@@ -64,6 +70,7 @@ Use controllers for business logic.
       - [ ] TimeCreated
         - [ ] should be a date with default Date.now
 
+### Build Controllers
 - [ ] In controller folder
   - [ ] create a file called suggestionController.js
   - [ ] getAllSuggestions
@@ -73,6 +80,7 @@ Use controllers for business logic.
   - [ ] updateSuggestion- user can only update title and suggestion
   - [ ] deleteSuggestion - suggestion deletes based on id
 
+### Use Postman Routes
 - [ ] Hook it up to suggestionRouter.js
 - [ ] GET /all-suggestions
 - [ ] GET /single-suggestion
