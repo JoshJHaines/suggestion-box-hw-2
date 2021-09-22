@@ -76,7 +76,7 @@ Use controllers for business logic.
 - [x] get one suggestion based on id using parameters
 - [x] createSuggestion- does not need id or time from user
 - [ ] updateSuggestion- user can only update title and suggestion
-- [ ] deleteSuggestion - suggestion deletes based on id
+- [x] deleteSuggestion - suggestion deletes based on id
 
 ### Use Postman Routes
 - [ ] Hook it up to suggestionRouter.js
@@ -84,7 +84,7 @@ Use controllers for business logic.
   - [x] GET /single-suggestion
   - [x] POST /create-suggestion
   - [ ] UPDATE /update-suggestion
-  - [ ] DELETE /delete-suggestion
+  - [x] DELETE /delete-suggestion
 
 ## Extra Credit
 - [ ] Make a GET /by-author-suggestion using query
