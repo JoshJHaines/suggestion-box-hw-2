@@ -18,30 +18,52 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/search-by-id/:id", function (req, res, next) {
-	suggestionController.getSuggestionByID(req.params.id, function (err, foundSuggestion) {
-		if (err) {
-			res.status(500).json({
-				message: "Something went wrong!",
-				error: err.message,
-			});
-		} else {
-			res.json({ message: "Success!", foundSuggestion });
+	suggestionController.getSuggestionByID(
+		req.params.id,
+		function (err, foundSuggestion) {
+			if (err) {
+				res.status(500).json({
+					message: "Something went wrong!",
+					error: err.message,
+				});
+			} else {
+				res.json({ message: "Success!", foundSuggestion });
+			}
 		}
-	});
+	);
 });
 
 router.post("/create-suggestion", function (req, res, next) {
 	// res.json({ message: "creation page" });
-	suggestionController.createSuggestion(req.body, function (err, savedSuggestion) {
-		if (err) {
-			res.status(500).json({
-				message: "Something went wrong!",
-				error: err.message,
-			});
-		} else {
-			res.json({ message: "success", savedSuggestion });
+	suggestionController.createSuggestion(
+		req.body,
+		function (err, savedSuggestion) {
+			if (err) {
+				res.status(500).json({
+					message: "Something went wrong!",
+					error: err.message,
+				});
+			} else {
+				res.json({ message: "success", savedSuggestion });
+			}
 		}
-	});
+	);
+});
+
+router.delete("/delete-by-id/:id", function (req, res) {
+	suggestionController.deleteSuggestion(
+		req.params.id,
+		function (err, deletedSuggestion) {
+			if (err) {
+				res.status(500).json({
+					message: "Something went wrong!",
+					error: err.message,
+				});
+			} else {
+				res.json({ message: "success", deletedSuggestion });
+			}
+		}
+	);
 });
 
 module.exports = router;
