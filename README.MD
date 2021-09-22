@@ -34,41 +34,40 @@ Use controllers for business logic.
   - [x] Delete all view related items
 
 ### Connect Database
-- [ ] Connect to mongodb with mongoose. 
-  - [ ] Remember to name database suggestion-hw.
+- [x] Connect to mongodb with mongoose. 
+  - [x] Remember to name database suggestion-hw.
   
-### Create Routes
-- [ ] Routes
-  - [ ] In routes folder create a suggestions folder
-    - [ ] Then create suggestionRouter.js inside suggestion folder
-    - [ ] Make sure you connect it through app.js with the path '/api/suggestions'
-  - [ ] In suggestion folder, 
-    - [ ] Create model folder
-    - [ ] Controller folder.
+### Create Routes 
+- [x] In routes folder create a suggestions folder
+  - [x] Then create suggestionRouter.js inside suggestion folder
+    - [x] Make sure you connect it through app.js with the path '/api/suggestions'
+  - [x] In suggestion folder, 
+    - [x] Create model folder
+    - [x] Controller folder.
 
 ### Create Data Models
 - [ ] In model folder, 
-  - [ ] create a file called Suggestion.js: 
-    - [ ] Build a schema for Suggestions called SuggestionSchema
+  - [x] create a file called Suggestion.js: 
+    - [x] Build a schema for Suggestions called SuggestionSchema
       - [ ] Title 
-        - [ ] string
+        - [x] string
         - [ ] lowercase
-        - [ ] unique
-        - [ ] required
+        - [x] unique
+        - [x] required
       - [ ] Author
-        - [ ] string
+        - [x] string
         - [ ] lowercase
       - [ ] Suggestion
-        - [ ] should be a string
+        - [x] string
         - [ ] lowercase
-        - [ ] required
+        - [x] required
       - [ ] Likes
-        - [ ] should be a number
-        - [ ] default to 0
-      - [ ] Anonymous
-        - [ ] should be a boolean
-      - [ ] TimeCreated
-        - [ ] should be a date with default Date.now
+        - [x] number
+        - [x] default to 0
+      - [x] Anonymous
+        - [x] boolean
+      - [x] TimeCreated
+        - [x] date with default Date.now
 
 ### Build Controllers
 - [ ] In controller folder
