@@ -89,8 +89,8 @@ Use controllers for business logic.
 - [ ] DELETE /delete-suggestion
 
 ## Extra Credit
-- [ ]Make a GET /by-author-suggestion using query
-- getSuggestionsByAuthor- if i query a author's name i should get a list of their suggestions
+- [ ] Make a GET /by-author-suggestion using query
+- [ ] getSuggestionsByAuthor- if i query a author's name i should get a list of their suggestions
 
 ### Hint:
 in url www.shop.com/products/?item=shoes
