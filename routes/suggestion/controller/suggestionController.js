@@ -10,6 +10,15 @@ module.exports = {
 			}
 		});
 	},
+    getSuggestionByID: (id, callback) => {
+		Suggestion.findById(id, function (err, foundSuggestion) {
+			if (err) {
+				callback(err, null);
+			} else {
+				callback(null, foundSuggestion);
+			}
+		});
+	},
     createSuggestion: (body, callback) => {
 		const createdSuggestion = new Suggestion({
 			title: body.title.toLowerCase(),
