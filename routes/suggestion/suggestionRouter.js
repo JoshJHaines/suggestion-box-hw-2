@@ -66,4 +66,21 @@ router.delete("/delete-by-id/:id", function (req, res) {
 	);
 });
 
+router.put("/update-by-id/:id", function (req,res){
+    suggestionController.updateSuggestionByID(
+        req.params.id,
+        req.body,
+        function(err, updatedSuggestion){
+            if (err){
+                res.status(500).json({
+                    message:"something went wrong",
+                    error: err.message
+                })
+            } else {
+                res.json({message:"success", updatedSuggestion})
+            }
+        }
+    )
+})
+
 module.exports = router;
