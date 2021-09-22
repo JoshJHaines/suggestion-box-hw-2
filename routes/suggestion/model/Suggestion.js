@@ -3,16 +3,19 @@ const mongoose = require("mongoose");
 const suggestionSchema = new mongoose.Schema(
 	{
 		title: {
-			type: String,
+            type: String,
+            lowercase: true,
             required: true,
-            unique: true
+            unique: true,
 		},
 		author: {
 			type: String,
+            lowercase: true,
 		},
 		suggestion: {
 			type: String,
             required: true,
+            lowercase: true,
 		},
         likes: {
             type: Number,
