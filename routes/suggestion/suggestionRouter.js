@@ -4,7 +4,7 @@ var suggestionController = require("./controller/suggestionController");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-	res.json({ message: "recipe page" });
+	res.json({ message: "suggestion page" });
 	// animalController.getAllAnimal({}, function (err, foundAnimal) {
 	// 	if (err) {
 	// 		res.status(500).json({

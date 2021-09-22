@@ -70,14 +70,13 @@ Use controllers for business logic.
         - [x] date with default Date.now
 
 ### Build Controllers
-- [ ] In controller folder
-  - [ ] create a file called suggestionController.js
-  - [ ] getAllSuggestions
-  - [ ] getSingleSuggestion
-  - [ ] get one suggestion based on id using parameters
-  - [ ] createSuggestion- does not need id or time from user
-  - [ ] updateSuggestion- user can only update title and suggestion
-  - [ ] deleteSuggestion - suggestion deletes based on id
+- [x] create a file called suggestionController.js
+- [x] getAllSuggestions
+- [ ] getSingleSuggestion
+- [ ] get one suggestion based on id using parameters
+- [ ] createSuggestion- does not need id or time from user
+- [ ] updateSuggestion- user can only update title and suggestion
+- [ ] deleteSuggestion - suggestion deletes based on id
 
 ### Use Postman Routes
 - [ ] Hook it up to suggestionRouter.js
