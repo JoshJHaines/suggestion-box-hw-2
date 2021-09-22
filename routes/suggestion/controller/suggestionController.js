@@ -21,9 +21,9 @@ module.exports = {
 	},
 	createSuggestion: (body, callback) => {
 		const createdSuggestion = new Suggestion({
-			title: body.title.toLowerCase(),
-			author: body.author.toLowerCase(),
-			suggestion: body.suggestion.toLowerCase(),
+			title: body.title,
+			author: body.author,
+			suggestion: body.suggestion,
 			likes: body.likes,
 			anonymous: body.anonymous,
 		});
@@ -45,4 +45,18 @@ module.exports = {
 			}
 		});
 	},
+    updateSuggestionByID: (id, body, callback) => {
+        Suggestion.findByIdAndUpdate(
+            id,
+            body,
+            {new: true},
+            function (err, updatedSuggestion){
+                if(err) {
+                    callback(err, null)
+                } else {
+                    callback(null, updatedSuggestion)
+                }
+            }
+        )
+    }
 };
