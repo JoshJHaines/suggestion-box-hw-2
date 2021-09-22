@@ -10,7 +10,7 @@ module.exports = {
 			}
 		});
 	},
-    getSuggestionByID: (id, callback) => {
+	getSuggestionByID: (id, callback) => {
 		Suggestion.findById(id, function (err, foundSuggestion) {
 			if (err) {
 				callback(err, null);
@@ -19,13 +19,13 @@ module.exports = {
 			}
 		});
 	},
-    createSuggestion: (body, callback) => {
+	createSuggestion: (body, callback) => {
 		const createdSuggestion = new Suggestion({
 			title: body.title.toLowerCase(),
 			author: body.author.toLowerCase(),
 			suggestion: body.suggestion.toLowerCase(),
-            likes: body.likes,
-            anonymous: body.anonymous
+			likes: body.likes,
+			anonymous: body.anonymous,
 		});
 
 		createdSuggestion.save(function (err, savedSuggestion) {
@@ -33,6 +33,15 @@ module.exports = {
 				callback(err, null);
 			} else {
 				callback(null, savedSuggestion);
+			}
+		});
+	},
+	deleteSuggestion: (id, callback) => {
+		Suggestion.findByIdAndDelete(id, function (err, deletedSuggestion) {
+			if (err) {
+				callback(err, null);
+			} else {
+				callback(null, deletedSuggestion);
 			}
 		});
 	},
