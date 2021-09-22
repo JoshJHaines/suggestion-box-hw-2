@@ -46,22 +46,22 @@ Use controllers for business logic.
     - [x] Controller folder.
 
 ### Create Data Models
-- [ ] In model folder, 
+- [x] In model folder, 
   - [x] create a file called Suggestion.js: 
     - [x] Build a schema for Suggestions called SuggestionSchema
-      - [ ] Title 
+      - [x] Title 
         - [x] string
-        - [ ] lowercase
+        - [x] lowercase
         - [x] unique
         - [x] required
-      - [ ] Author
+      - [x] Author
         - [x] string
-        - [ ] lowercase
-      - [ ] Suggestion
+        - [x] lowercase
+      - [x] Suggestion
         - [x] string
-        - [ ] lowercase
+        - [x] lowercase
         - [x] required
-      - [ ] Likes
+      - [x] Likes
         - [x] number
         - [x] default to 0
       - [x] Anonymous
@@ -74,7 +74,7 @@ Use controllers for business logic.
 - [x] getAllSuggestions
 - [ ] getSingleSuggestion
 - [ ] get one suggestion based on id using parameters
-- [ ] createSuggestion- does not need id or time from user
+- [x] createSuggestion- does not need id or time from user
 - [ ] updateSuggestion- user can only update title and suggestion
 - [ ] deleteSuggestion - suggestion deletes based on id
 
